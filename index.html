@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-col">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="encriptador-de-texto/styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor__titulo">
+            <h1>Encriptador de texto</h1>
+        </div>
+    </header>
+    <main class="contenedor__principal">
+        <section class="contenedor__contenido">  
+            <div class="contenedor__contenido__texto">
+                <textarea name="texto" id="texto" class="texto" cols="30" rows="10"
+                    placeholder="Ingresa el texto aqui"></textarea>
+             </div>
+            <div class="contenedor__terminos">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenedor__botones">
+                <button class="contenedor__btn_action" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="contenedor__btn_action" type="button" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenedor__contenido__dos">
+            <div class="encriptado">
+                <img src="encriptador-de-texto/assets/Muñeco.png" alt="Esta es una imagen de un muñeco" class="muñeco">
+                <div class="mensaje__encriptado" id="mensaje__encriptado">
+                    <h2 id="Mensaje__contenido__dos">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafo__contedino__dos" class="parrafo__contenido__dos">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="/encriptador-de-texto/script/app.js"></script>
+
+    <footer class="footer">
+        <p>Desarrollado por Maria Fernanda Rodriguez</p>
+    </footer>
+
+</body>
+
+</html>
