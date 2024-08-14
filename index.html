@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="encriptador-de-texto/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
@@ -15,39 +16,55 @@
         </div>
     </header>
     <main class="contenedor__principal">
-        <section class="contenedor__contenido">  
-            <div class="contenedor__contenido__texto">
-                <textarea name="texto" id="texto" class="texto" cols="30" rows="10"
+        <section class="seccion__contenido">
+            <div class="contenedor__texto">
+                <textarea name="texto" id="texto" class="texto" cols="30" rows="9"
                     placeholder="Ingresa el texto aqui"></textarea>
-             </div>
+            </div>
             <div class="contenedor__terminos">
+                <img src="assets/signo.png" alt="Signo de exclamacion" class="signo" id="signo"
+                    style="visibility: visible">
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenedor__botones">
-                <button class="contenedor__btn_action" type="button" onclick="encriptar()">Encriptar</button>
-                <button class="contenedor__btn_action" type="button" onclick="desencriptar()">Desencriptar</button>
+                <button class="contenedor__btn__action" id="contenedor__btn__action" type="button"
+                    onclick="encriptar()">Encriptar</button>
+                <button class="contenedor__btn__action" id="contenedor__btn__action" type="button"
+                    onclick="desencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section class="contenedor__contenido__dos">
-            <div class="encriptado">
-                <img src="encriptador-de-texto/assets/Muñeco.png" alt="Esta es una imagen de un muñeco" class="muñeco">
-                <div class="mensaje__encriptado" id="mensaje__encriptado">
-                    <h2 id="Mensaje__contenido__dos">Ningún mensaje fue encontrado</h2>
-                    <p id="parrafo__contedino__dos" class="parrafo__contenido__dos">Ingresa el texto que desees encriptar o desencriptar.</p>
-                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
-                    
+        <section class="seccion__contenido_encriptado">
+            <div class="contenedor__encriptado">
+                <img src="assets/Muñeco.png" alt="Esta es una imagen de un muñeco" class="muñeco" id="muñeco"
+                    style="visibility: visible">
+                <div class="contenedor__mensaje">
+                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="10" rows="5"
+                    style=" display:none"></textarea>
+                </div>
+                
+                <div class="contenedor__texto__encriptado" id="contenedor__texto__encriptado">
+                    <h2 id="mensaje__encriptado__dos" class="mensaje__encriptado__dos">Ningún mensaje fue encontrado
+                    </h2>
+                    <p id="parrafo__encriptado__dos" class="parrafo__encriptado__dos">Ingresa el texto que desees
+                        encriptar o desencriptar.</p>
+                </div>
+                <div class="contenedor__boton__copiar">
+                    <button class="boton__copiar" id="boton__copiar" type="button"
+                        onclick="accionCopiar()" style="display:none">Copiar</button>
                 </div>
             </div>
+
         </section>
 
     </main>
-    
-    <script src="/encriptador-de-texto/script/app.js"></script>
 
     <footer class="footer">
         <p>Desarrollado por Maria Fernanda Rodriguez</p>
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script/app.js"></script>
+<script src="script/sweetAlert.js"></script>
 
 </html>
