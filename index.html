@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icono.png">
 
 </head>
 
 <body>
     <header class="header">
         <div class="contenedor__titulo">
-            <h1>Encriptador de texto</h1>
+            <!--<img src="assets/icon.png" alt="Icono" class="icono">
+            <h1>Encriptador de texto</h1>-->
+            <box-icon name='code-alt' animation='spin' color='#0a3871' size="lg"></box-icon>
         </div>
     </header>
-    <main class="contenedor__principal">
+    <main class="contenedor__principal" id="contenedor__principal">
         <section class="seccion__contenido">
             <div class="contenedor__texto">
-                <textarea name="texto" id="texto" class="texto" cols="30" rows="9"
+                <textarea name="texto" id="texto" class="texto" cols="30" rows="7"
                     placeholder="Ingresa el texto aqui"></textarea>
             </div>
             <div class="contenedor__terminos">
-                <img src="assets/signo.png" alt="Signo de exclamacion" class="signo" id="signo"
-                    style="visibility: visible">
+                <box-icon name='info-circle' type='solid' animation='tada' color='#0a3871'></box-icon>
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenedor__botones">
-                <button class="contenedor__btn__action" id="contenedor__btn__action" type="button"
+                <button class="btn__encriptar__action" id="btn__encriptar__action" type="button"
                     onclick="encriptar()">Encriptar</button>
-                <button class="contenedor__btn__action" id="contenedor__btn__action" type="button"
+                <button class="btn__desencriptar__action" id="btn__desencriptar__action" type="button"
                     onclick="desencriptar()">Desencriptar</button>
             </div>
         </section>
@@ -38,10 +40,10 @@
                 <img src="assets/Muñeco.png" alt="Esta es una imagen de un muñeco" class="muñeco" id="muñeco"
                     style="visibility: visible">
                 <div class="contenedor__mensaje">
-                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="10" rows="5"
-                    style=" display:none"></textarea>
+                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="10" rows="4"
+                        style=" display:none"></textarea>
                 </div>
-                
+
                 <div class="contenedor__texto__encriptado" id="contenedor__texto__encriptado">
                     <h2 id="mensaje__encriptado__dos" class="mensaje__encriptado__dos">Ningún mensaje fue encontrado
                     </h2>
@@ -49,8 +51,8 @@
                         encriptar o desencriptar.</p>
                 </div>
                 <div class="contenedor__boton__copiar">
-                    <button class="boton__copiar" id="boton__copiar" type="button"
-                        onclick="accionCopiar()" style="display:none">Copiar</button>
+                    <button class="boton__copiar" id="boton__copiar" type="button" onclick="accionCopiar()"
+                        style="display:none">Copiar</button>
                 </div>
             </div>
 
@@ -60,9 +62,17 @@
 
     <footer class="footer">
         <p>Desarrollado por Maria Fernanda Rodriguez</p>
+        <a title="" href="https://www.linkedin.com/in/maria-fernanda-rodriguezd/" target="_blank"><img
+                src="assets/icon-linkedin.png" alt="Linkedin" /></a>
+        <a title="" href="https://github.com/Chicafro" target="_blank"><img src="assets/github-logo.png"
+                alt="GitHub" /></a>
+        <a title="" href="https://www.instagram.com/chicafro?igsh=MWVhMTBvdzBjNW1mNg==" target="_blank"><img
+                src="assets/instagram-logo.png" alt="Instagram" /></a>
     </footer>
 
 </body>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script/app.js"></script>
 <script src="script/sweetAlert.js"></script>
